@@ -7,11 +7,11 @@ export type Locale = (typeof locales)[number];
 const dictionaries = {
   de: {
     metadata: {
-      title: "Detailing Creation | Aircraft Detailing in 59597",
+      title: "Aircraft Detailing Creation | Flugzeugaufbereitung bei 59597",
       description:
-        "Professionelle Pflege, Aufbereitung und Schutz für Privat- und Geschäftsflugzeuge im Raum 59597.",
+        "Mobile Flugzeugaufbereitung, Pflege und Oberflächenschutz für Privat- und Geschäftsflugzeuge im Raum 59597.",
       openGraphDescription:
-        "Präzise Flugzeugpflege für Werterhalt, Schutz und einen professionellen Auftritt.",
+        "Mobile Flugzeugpflege für Werterhalt, Schutz und einen professionellen Auftritt im Raum 59597.",
     },
     navigation: {
       services: "Leistungen",
@@ -330,11 +330,11 @@ const dictionaries = {
   },
   en: {
     metadata: {
-      title: "Detailing Creation | Aircraft Detailing near 59597",
+      title: "Aircraft Detailing Creation | Aircraft Detailing near 59597",
       description:
-        "Professional care, restoration and protection for private and business aircraft in the 59597 region.",
+        "Mobile aircraft detailing, care and surface protection for private and business aircraft around 59597, Germany.",
       openGraphDescription:
-        "Precision aircraft care focused on value retention, protection and a professional appearance.",
+        "Mobile aircraft care focused on value retention, protection and a professional appearance around 59597, Germany.",
     },
     navigation: {
       services: "Services",

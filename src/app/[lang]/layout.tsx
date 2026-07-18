@@ -7,6 +7,7 @@ import {
   hasLocale,
   locales,
 } from "@/i18n/dictionaries";
+import { siteConfig } from "@/lib/site-config";
 
 import "../globals.css";
 
@@ -41,13 +42,13 @@ export async function generateMetadata({
   const { metadata } = await getDictionary(lang);
 
   return {
-    applicationName: "Detailing Creation",
+    applicationName: siteConfig.name,
     title: {
       default: metadata.title,
-      template: "%s | Detailing Creation",
+      template: `%s | ${siteConfig.name}`,
     },
     description: metadata.description,
-    metadataBase: new URL("https://detailing-creation.de"),
+    metadataBase: new URL(siteConfig.url),
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -56,13 +57,23 @@ export async function generateMetadata({
         "x-default": "/de",
       },
     },
+    robots: {
+      index: siteConfig.indexable,
+      follow: siteConfig.indexable,
+    },
     openGraph: {
-      title: "Detailing Creation",
-      siteName: "Detailing Creation",
+      title: metadata.title,
+      siteName: siteConfig.name,
       description: metadata.openGraphDescription,
+      url: `/${lang}`,
       locale: lang === "de" ? "de_DE" : "en_GB",
       alternateLocale: lang === "de" ? ["en_GB"] : ["de_DE"],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metadata.title,
+      description: metadata.openGraphDescription,
     },
   };
 }

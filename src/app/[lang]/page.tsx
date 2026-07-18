@@ -8,6 +8,7 @@ import { ServiceArea } from "@/components/marketing/service-area";
 import { Services } from "@/components/marketing/services";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { StructuredData } from "@/components/structured-data";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 
 export default async function Home({
@@ -25,6 +26,10 @@ export default async function Home({
 
   return (
     <>
+      <StructuredData
+        locale={lang}
+        description={dictionary.metadata.description}
+      />
       <SiteHeader locale={lang} copy={dictionary.navigation} />
       <main>
         <Hero copy={dictionary.hero} visualCopy={dictionary.aircraftVisual} />
