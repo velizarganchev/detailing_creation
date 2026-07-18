@@ -12,17 +12,19 @@ type SiteHeaderProps = {
 };
 
 export function SiteHeader({ locale, copy }: SiteHeaderProps) {
+  const homePath = `/${locale}`;
   const navigation = [
-    { href: "#services", label: copy.services },
-    { href: "#process", label: copy.process },
-    { href: "#service-area", label: copy.serviceArea },
-    { href: "#contact", label: copy.contact },
+    { href: `${homePath}#services`, label: copy.services },
+    { href: `${homePath}#pricing`, label: copy.pricing },
+    { href: `${homePath}#process`, label: copy.process },
+    { href: `${homePath}#service-area`, label: copy.serviceArea },
+    { href: `${homePath}#contact`, label: copy.contact },
   ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#07141d]/92 text-white backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <Link href="#top" aria-label={copy.homeLabel}>
+        <Link href={`${homePath}#top`} aria-label={copy.homeLabel}>
           <BrandMark />
         </Link>
 
@@ -44,7 +46,7 @@ export function SiteHeader({ locale, copy }: SiteHeaderProps) {
         <div className="flex items-center gap-2 sm:gap-3">
           <LanguageSwitcher locale={locale} label={copy.languageLabel} />
           <Link
-            href="#contact"
+            href={`${homePath}#contact`}
             className={cn(
               buttonVariants({ size: "sm" }),
               "hidden h-10 sm:inline-flex",

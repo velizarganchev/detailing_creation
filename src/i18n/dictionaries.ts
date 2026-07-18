@@ -15,6 +15,7 @@ const dictionaries = {
     },
     navigation: {
       services: "Leistungen",
+      pricing: "Preise",
       process: "Ablauf",
       serviceArea: "Einsatzgebiet",
       contact: "Kontakt",
@@ -46,40 +47,137 @@ const dictionaries = {
       eyebrow: "Leistungssystem",
       title: "Pflege entlang des tatsächlichen Zustands.",
       description:
-        "Keine pauschalen Pakete für jedes Luftfahrzeug. Der sinnvolle Leistungsumfang wird nach Oberfläche, Nutzung, Standort und Ziel definiert.",
+        "Mobile Flugzeugpflege für Privat- und Geschäftsflugzeuge im Raum 59597. Der sinnvolle Leistungsumfang wird nach Zustand, Material, Nutzung und Standort individuell geplant.",
+      requestService: "Diese Leistung anfragen",
       items: [
         {
-          title: "Exterior Care",
+          title: "Exterior Aircraft Detailing",
           description:
-            "Materialgerechte Reinigung und Aufbereitung von Rumpf, Flächen und schwer zugänglichen Bereichen.",
+            "Sorgfältige Außenpflege für einen professionellen Auftritt und den langfristigen Werterhalt des Luftfahrzeugs.",
+          includes: [
+            "Rumpf, Tragflächen und Leitwerk",
+            "Unterseiten und zugängliche Detailbereiche",
+            "Materialgerechte Reinigungsverfahren",
+          ],
         },
         {
-          title: "Paint Correction",
+          title: "Interior Aircraft Detailing",
           description:
-            "Geplante Korrektur verwitterter oder oxidierter Oberflächen nach vorheriger Zustandsbewertung.",
+            "Abgestimmte Pflege der Kabine mit besonderem Augenmerk auf hochwertige und empfindliche Materialien.",
+          includes: [
+            "Leder-, Textil- und Kunststoffpflege",
+            "Kabinen- und Oberflächenreinigung",
+            "Materialverträgliche Produktauswahl",
+          ],
+        },
+        {
+          title: "Paint Correction & Polishing",
+          description:
+            "Geplante Aufbereitung geeigneter Lackoberflächen bei Glanzverlust, Verwitterung oder sichtbarer Oxidation.",
+          includes: [
+            "Vorherige Zustands- und Lackbewertung",
+            "Abgestimmte Politur und Glanzoptimierung",
+            "Testbereich vor umfangreichen Arbeiten",
+          ],
         },
         {
           title: "Surface Protection",
           description:
-            "Schutzkonzepte für lackierte und empfindliche Oberflächen – abgestimmt auf Nutzung und Abstellung.",
+            "Individuell gewählter Oberflächenschutz, abgestimmt auf Lack, Nutzung, Abstellung und Pflegeziel.",
+          includes: [
+            "Schutz für geeignete lackierte Oberflächen",
+            "Auswahl nach Einsatz- und Abstellprofil",
+            "Empfehlungen für die weitere Pflege",
+          ],
         },
         {
-          title: "Interior Care",
+          title: "Brightwork & Metal Polishing",
           description:
-            "Sorgfältige Pflege von Leder, Textilien und Innenraumoberflächen mit Blick auf Materialverträglichkeit.",
+            "Gezielte Aufbereitung geeigneter Metall- und Zierflächen für ein sauberes, gleichmäßiges Finish.",
+          includes: [
+            "Bewertung der jeweiligen Metalloberfläche",
+            "Entfernung geeigneter Oxidationsspuren",
+            "Politur und abgestimmter Finish-Schutz",
+          ],
         },
         {
-          title: "Brightwork & Windows",
+          title: "Aircraft Window Care",
           description:
-            "Gezielte Pflege von Metall, Plexiglas und weiteren spezialisierten Sicht- und Zierflächen.",
+            "Schonende Reinigung transparenter Luftfahrzeugflächen mit Fokus auf Materialverträglichkeit und kratzarmes Arbeiten.",
+          includes: [
+            "Pflege von Acryl- und Plexiglasflächen",
+            "Geeignete Reiniger und weiche Werkzeuge",
+            "Kontrollierte, kratzarme Arbeitsweise",
+          ],
         },
         {
-          title: "Aircraft Assessment",
+          title: "Aircraft Assessment & Custom Care Plan",
           description:
-            "Individuelle Bestandsaufnahme als Grundlage für Umfang, Ablauf und belastbare Angebotserstellung.",
+            "Die strukturierte Bestandsaufnahme schafft die Grundlage für einen passenden Pflegeplan und ein belastbares Angebot.",
+          includes: [
+            "Bewertung anhand von Fotos oder vor Ort",
+            "Abstimmung von Material, Zugang und Ziel",
+            "Individueller Leistungsplan und Angebot",
+          ],
         },
       ],
-      note: "Der finale Leistungsumfang wird vor Veröffentlichung gemeinsam bestätigt. Aircraft Painting und Reparaturen sind derzeit nicht als aktive Leistungen dargestellt.",
+      note: "Alle Arbeiten werden vorab auf Luftfahrzeug, Material und Zugänglichkeit abgestimmt. Aircraft Painting, strukturelle oder technische Reparaturen und Wartungsarbeiten sind nicht Bestandteil des Angebots.",
+    },
+    pricing: {
+      eyebrow: "Preisorientierung",
+      title: "Transparent starten. Präzise nach Zustand kalkulieren.",
+      description:
+        "Die Einstiegspreise geben eine belastbare erste Orientierung für leichte Flugzeuge. Das finale Angebot berücksichtigt MTOW, Zustand, Zugänglichkeit und den tatsächlichen Leistungsumfang.",
+      conceptLabel: "Orientierungswerte zur Markteinführung",
+      tableCaption:
+        "Orientierende Einstiegspreise nach MTOW und Leistungspaket",
+      aircraftClass: "Luftfahrzeugklasse",
+      exteriorWash: "Exterior Wash",
+      completeCare: "Complete Care",
+      interiorDetail: "Interior Detail",
+      from: "ab",
+      tiers: [
+        {
+          label: "bis 600 kg MTOW",
+          exterior: "279 €",
+          complete: "399 €",
+          interior: "199 €",
+        },
+        {
+          label: "600–800 kg MTOW",
+          exterior: "329 €",
+          complete: "479 €",
+          interior: "239 €",
+        },
+        {
+          label: "800–1.800 kg MTOW",
+          exterior: "429 €",
+          complete: "619 €",
+          interior: "299 €",
+        },
+        {
+          label: "1.800–3.500 kg MTOW",
+          exterior: "599 €",
+          complete: "769 €",
+          interior: "399 €",
+        },
+      ],
+      completeCareLabel: "Paketlogik",
+      completeCareTitle: "Complete Care verbindet die wichtigsten Grundlagen.",
+      completeCareItems: [
+        "Materialgerechte Außenwäsche",
+        "Quick Protection",
+        "Basis-Innenreinigung",
+      ],
+      customLabel: "Individuelle Kalkulation",
+      customTitle: "Correction, Protection & Brightwork",
+      customDescription:
+        "Paint Correction, längerfristiger Oberflächenschutz, Brightwork und besondere Zustände werden erst nach Foto- oder Vor-Ort-Bewertung kalkuliert.",
+      requestAssessment: "Bewertung anfragen",
+      travelNote:
+        "Anfahrt, Flugplatzzugang und besondere Arbeitsbedingungen werden vor der Buchung transparent bestätigt.",
+      conceptNote:
+        "Konzeptpreise – finale Preis- und Steuerdarstellung folgt vor Veröffentlichung.",
     },
     process: {
       eyebrow: "Vorgesehener Ablauf",
@@ -118,15 +216,88 @@ const dictionaries = {
       title: "Zeigen Sie uns, worum es geht.",
       description:
         "Mit wenigen Angaben und aktuellen Fotos lässt sich der nächste sinnvolle Schritt schneller einordnen.",
-      formNotice: "Anfrageformular folgt im nächsten Schritt",
       assessmentTitle: "Für eine erste Einschätzung",
       items: [
-        "Gewünschte Leistung",
-        "Fotos vom aktuellen Zustand",
-        "Bevorzugter Kontaktweg",
+        "Luftfahrzeug, Standort und gewünschte Leistung",
+        "Bis zu drei aktuelle Zustandsfotos",
+        "Bevorzugter Kontaktweg für die Rückmeldung",
       ],
       contactNotice:
         "E-Mail, Telefon und Geschäftszeiten werden ergänzt, sobald die offiziellen Kontaktdaten feststehen.",
+      form: {
+        eyebrow: "Anfrageformular",
+        title: "Erste Einschätzung anfragen",
+        required: "* Pflichtfelder",
+        website: "Website",
+        fullName: "Name",
+        company: "Unternehmen",
+        email: "E-Mail",
+        phone: "Telefon",
+        aircraft: "Luftfahrzeug",
+        aircraftPlaceholder: "Hersteller und Modell",
+        location: "Standort",
+        locationPlaceholder: "Flugplatz oder Postleitzahl",
+        service: "Gewünschte Leistung",
+        servicePlaceholder: "Leistung auswählen",
+        services: [
+          {
+            value: "exterior-detailing",
+            label: "Exterior Aircraft Detailing",
+          },
+          {
+            value: "interior-detailing",
+            label: "Interior Aircraft Detailing",
+          },
+          {
+            value: "paint-correction",
+            label: "Paint Correction & Polishing",
+          },
+          {
+            value: "surface-protection",
+            label: "Surface Protection",
+          },
+          {
+            value: "brightwork",
+            label: "Brightwork & Metal Polishing",
+          },
+          {
+            value: "window-care",
+            label: "Aircraft Window Care",
+          },
+          {
+            value: "assessment",
+            label: "Aircraft Assessment & Custom Care Plan",
+          },
+        ],
+        contactPreference: "Bevorzugter Kontaktweg",
+        contactOptions: [
+          { value: "email", label: "E-Mail" },
+          { value: "phone", label: "Telefon" },
+        ],
+        message: "Beschreibung",
+        messagePlaceholder:
+          "Was soll behandelt werden? Beschreiben Sie bitte den aktuellen Zustand und das gewünschte Ergebnis.",
+        photos: "Aktuelle Fotos hinzufügen",
+        photosHelp:
+          "Optional: maximal 3 JPG-, PNG- oder WebP-Dateien, jeweils bis 1,2 MB.",
+        privacyAcknowledgementBefore: "Ich habe die",
+        privacyPolicy: "Datenschutzerklärung",
+        privacyAcknowledgementAfter: " zur Kenntnis genommen.",
+        submit: "Anfrage senden",
+        pending: "Wird gesendet …",
+        success:
+          "Vielen Dank. Ihre Anfrage wurde übermittelt und wird geprüft.",
+        notConfigured:
+          "Das sichere Versenden wird gerade eingerichtet. Bitte versuchen Sie es später erneut.",
+        invalidFields:
+          "Bitte prüfen Sie die Pflichtfelder und Ihre Kontaktdaten.",
+        filesTooLarge:
+          "Die Fotos sind zu groß. Bitte wählen Sie bis zu 3 Dateien mit jeweils maximal 1,2 MB.",
+        invalidFiles:
+          "Bitte verwenden Sie ausschließlich JPG-, PNG- oder WebP-Fotos.",
+        error:
+          "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+      },
     },
     footer: {
       description:
@@ -134,10 +305,12 @@ const dictionaries = {
       navigation: "Navigation",
       legal: "Rechtliches",
       services: "Leistungen",
+      pricing: "Preise",
       process: "Ablauf",
       contact: "Kontakt",
-      imprint: "Impressum folgt",
-      privacy: "Datenschutz folgt",
+      imprint: "Impressum",
+      privacy: "Datenschutzerklärung",
+      homeLabel: "Detailing Creation – Startseite",
       conceptPhase: "Konzeptphase.",
     },
   },
@@ -151,6 +324,7 @@ const dictionaries = {
     },
     navigation: {
       services: "Services",
+      pricing: "Pricing",
       process: "Process",
       serviceArea: "Service area",
       contact: "Contact",
@@ -182,40 +356,137 @@ const dictionaries = {
       eyebrow: "Service system",
       title: "Care shaped by the aircraft’s actual condition.",
       description:
-        "No one-size-fits-all packages. The right scope is defined by the surface, usage, location and desired outcome.",
+        "Mobile aircraft care for private and business aircraft around 59597. The appropriate scope is planned individually around condition, material, operation and location.",
+      requestService: "Request this service",
       items: [
         {
-          title: "Exterior Care",
+          title: "Exterior Aircraft Detailing",
           description:
-            "Material-appropriate cleaning and detailing for the fuselage, wings and hard-to-reach areas.",
+            "Careful exterior detailing focused on a professional appearance and the aircraft’s long-term value.",
+          includes: [
+            "Fuselage, wings and empennage",
+            "Undersides and accessible detail areas",
+            "Material-appropriate cleaning methods",
+          ],
         },
         {
-          title: "Paint Correction",
+          title: "Interior Aircraft Detailing",
           description:
-            "Planned correction of weathered or oxidised surfaces following an initial condition assessment.",
+            "Considered cabin care with particular attention to high-quality and sensitive materials.",
+          includes: [
+            "Leather, textile and plastic care",
+            "Cabin and interior surface cleaning",
+            "Material-compatible product selection",
+          ],
+        },
+        {
+          title: "Paint Correction & Polishing",
+          description:
+            "Planned treatment of suitable painted surfaces affected by fading, weathering or visible oxidation.",
+          includes: [
+            "Initial condition and paint assessment",
+            "Tailored polishing and gloss refinement",
+            "Test area before extensive correction",
+          ],
         },
         {
           title: "Surface Protection",
           description:
-            "Protection concepts for painted and sensitive surfaces, aligned with operation and storage.",
+            "Individually selected surface protection aligned with the paint, operation, storage and care objective.",
+          includes: [
+            "Protection for suitable painted surfaces",
+            "Selection based on operation and storage",
+            "Recommendations for continued care",
+          ],
         },
         {
-          title: "Interior Care",
+          title: "Brightwork & Metal Polishing",
           description:
-            "Careful treatment of leather, textiles and cabin surfaces with material compatibility in mind.",
+            "Targeted refinement of suitable metal and decorative surfaces for a clean, consistent finish.",
+          includes: [
+            "Assessment of the individual metal surface",
+            "Removal of suitable oxidation marks",
+            "Polishing and an appropriate finish protection",
+          ],
         },
         {
-          title: "Brightwork & Windows",
+          title: "Aircraft Window Care",
           description:
-            "Targeted care for metal, acrylic glazing and other specialised transparent and decorative surfaces.",
+            "Gentle cleaning of transparent aircraft surfaces with a focus on material compatibility and scratch-conscious handling.",
+          includes: [
+            "Care for acrylic and Plexiglas surfaces",
+            "Suitable cleaners and soft tools",
+            "Controlled, scratch-conscious technique",
+          ],
         },
         {
-          title: "Aircraft Assessment",
+          title: "Aircraft Assessment & Custom Care Plan",
           description:
-            "An individual condition review providing the basis for scope, process and a reliable quotation.",
+            "A structured condition review providing the basis for an appropriate care plan and a reliable quotation.",
+          includes: [
+            "Assessment from photographs or on site",
+            "Alignment on material, access and objective",
+            "Individual service plan and quotation",
+          ],
         },
       ],
-      note: "The final service scope will be confirmed together before publication. Aircraft painting and repairs are not currently presented as active services.",
+      note: "All work is aligned with the aircraft, material and access requirements in advance. Aircraft painting, structural or technical repairs and maintenance are not included in the service offering.",
+    },
+    pricing: {
+      eyebrow: "Price guidance",
+      title: "Transparent from the start. Precise after assessment.",
+      description:
+        "These starting prices provide a reliable first indication for light aircraft. The final quotation reflects MTOW, condition, access and the actual scope of work.",
+      conceptLabel: "Launch price guidance",
+      tableCaption:
+        "Indicative starting prices by MTOW and service package",
+      aircraftClass: "Aircraft class",
+      exteriorWash: "Exterior Wash",
+      completeCare: "Complete Care",
+      interiorDetail: "Interior Detail",
+      from: "from",
+      tiers: [
+        {
+          label: "up to 600 kg MTOW",
+          exterior: "€279",
+          complete: "€399",
+          interior: "€199",
+        },
+        {
+          label: "600–800 kg MTOW",
+          exterior: "€329",
+          complete: "€479",
+          interior: "€239",
+        },
+        {
+          label: "800–1,800 kg MTOW",
+          exterior: "€429",
+          complete: "€619",
+          interior: "€299",
+        },
+        {
+          label: "1,800–3,500 kg MTOW",
+          exterior: "€599",
+          complete: "€769",
+          interior: "€399",
+        },
+      ],
+      completeCareLabel: "Package logic",
+      completeCareTitle: "Complete Care combines the essential foundations.",
+      completeCareItems: [
+        "Material-appropriate exterior wash",
+        "Quick protection",
+        "Basic interior cleaning",
+      ],
+      customLabel: "Individually quoted",
+      customTitle: "Correction, Protection & Brightwork",
+      customDescription:
+        "Paint correction, longer-term surface protection, brightwork and exceptional conditions are quoted after a photographic or on-site assessment.",
+      requestAssessment: "Request an assessment",
+      travelNote:
+        "Travel, airfield access and special working conditions are confirmed transparently before booking.",
+      conceptNote:
+        "Concept pricing – final price and tax presentation will be confirmed before publication.",
     },
     process: {
       eyebrow: "Proposed process",
@@ -254,15 +525,88 @@ const dictionaries = {
       title: "Show us what needs attention.",
       description:
         "A few key details and current photographs help us identify the most appropriate next step.",
-      formNotice: "Request form coming in the next step",
       assessmentTitle: "For an initial assessment",
       items: [
-        "Required service",
-        "Photographs of the current condition",
-        "Preferred contact method",
+        "Aircraft, location and required service",
+        "Up to three current condition photographs",
+        "Preferred contact method for our response",
       ],
       contactNotice:
         "Email, telephone and business hours will be added as soon as the official contact details are confirmed.",
+      form: {
+        eyebrow: "Request form",
+        title: "Request an initial assessment",
+        required: "* Required fields",
+        website: "Website",
+        fullName: "Name",
+        company: "Company",
+        email: "Email",
+        phone: "Telephone",
+        aircraft: "Aircraft",
+        aircraftPlaceholder: "Manufacturer and model",
+        location: "Location",
+        locationPlaceholder: "Airfield or postcode",
+        service: "Required service",
+        servicePlaceholder: "Select a service",
+        services: [
+          {
+            value: "exterior-detailing",
+            label: "Exterior Aircraft Detailing",
+          },
+          {
+            value: "interior-detailing",
+            label: "Interior Aircraft Detailing",
+          },
+          {
+            value: "paint-correction",
+            label: "Paint Correction & Polishing",
+          },
+          {
+            value: "surface-protection",
+            label: "Surface Protection",
+          },
+          {
+            value: "brightwork",
+            label: "Brightwork & Metal Polishing",
+          },
+          {
+            value: "window-care",
+            label: "Aircraft Window Care",
+          },
+          {
+            value: "assessment",
+            label: "Aircraft Assessment & Custom Care Plan",
+          },
+        ],
+        contactPreference: "Preferred contact method",
+        contactOptions: [
+          { value: "email", label: "Email" },
+          { value: "phone", label: "Telephone" },
+        ],
+        message: "Description",
+        messagePlaceholder:
+          "What needs attention? Please describe the current condition and the result you would like to achieve.",
+        photos: "Add current photographs",
+        photosHelp:
+          "Optional: up to 3 JPG, PNG or WebP files, maximum 1.2 MB each.",
+        privacyAcknowledgementBefore: "I have read the",
+        privacyPolicy: "privacy policy",
+        privacyAcknowledgementAfter: ".",
+        submit: "Send request",
+        pending: "Sending …",
+        success:
+          "Thank you. Your request has been submitted and will be reviewed.",
+        notConfigured:
+          "Secure submission is currently being set up. Please try again later.",
+        invalidFields:
+          "Please check the required fields and your contact details.",
+        filesTooLarge:
+          "The photographs are too large. Please select up to 3 files with a maximum of 1.2 MB each.",
+        invalidFiles:
+          "Please use JPG, PNG or WebP photographs only.",
+        error:
+          "Your request could not be sent. Please try again later.",
+      },
     },
     footer: {
       description:
@@ -270,10 +614,12 @@ const dictionaries = {
       navigation: "Navigation",
       legal: "Legal",
       services: "Services",
+      pricing: "Pricing",
       process: "Process",
       contact: "Contact",
-      imprint: "Imprint to follow",
-      privacy: "Privacy policy to follow",
+      imprint: "Imprint",
+      privacy: "Privacy policy",
+      homeLabel: "Detailing Creation – Home",
       conceptPhase: "Concept phase.",
     },
   },

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { FinalCta } from "@/components/marketing/final-cta";
 import { Hero } from "@/components/marketing/hero";
+import { Pricing } from "@/components/marketing/pricing";
 import { Process } from "@/components/marketing/process";
 import { ServiceArea } from "@/components/marketing/service-area";
 import { Services } from "@/components/marketing/services";
@@ -28,11 +29,12 @@ export default async function Home({
       <main>
         <Hero copy={dictionary.hero} visualCopy={dictionary.aircraftVisual} />
         <Services copy={dictionary.services} />
+        <Pricing copy={dictionary.pricing} />
         <Process copy={dictionary.process} />
         <ServiceArea copy={dictionary.serviceArea} />
-        <FinalCta copy={dictionary.cta} />
+        <FinalCta copy={dictionary.cta} locale={lang} />
       </main>
-      <SiteFooter copy={dictionary.footer} />
+      <SiteFooter locale={lang} copy={dictionary.footer} />
     </>
   );
 }

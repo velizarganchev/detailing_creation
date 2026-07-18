@@ -1,7 +1,9 @@
 import {
   Armchair,
+  ArrowDownRight,
   CircleGauge,
   Droplets,
+  Eye,
   ScanSearch,
   Shield,
   Sparkles,
@@ -23,15 +25,15 @@ const services: Service[] = [
   },
   {
     number: "02",
-    icon: Sparkles,
+    icon: Armchair,
   },
   {
     number: "03",
-    icon: Shield,
+    icon: Sparkles,
   },
   {
     number: "04",
-    icon: Armchair,
+    icon: Shield,
   },
   {
     number: "05",
@@ -39,6 +41,10 @@ const services: Service[] = [
   },
   {
     number: "06",
+    icon: Eye,
+  },
+  {
+    number: "07",
     icon: ScanSearch,
   },
 ];
@@ -57,14 +63,14 @@ export function Services({ copy }: { copy: Dictionary["services"] }) {
           </p>
         </div>
 
-        <div className="mt-14 grid border-l border-t md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid border-l border-t md:grid-cols-2">
           {services.map((service, index) => {
             const Icon = service.icon;
             const content = copy.items[index];
             return (
               <article
                 key={content.title}
-                className="group min-h-72 border-b border-r bg-card p-7 transition-colors hover:bg-white sm:p-8"
+                className="group flex min-h-[27rem] flex-col border-b border-r bg-card p-7 transition-colors hover:bg-white sm:p-8 lg:p-10"
               >
                 <div className="flex items-start justify-between">
                   <span className="font-mono text-xs text-muted-foreground">
@@ -80,6 +86,27 @@ export function Services({ copy }: { copy: Dictionary["services"] }) {
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">
                   {content.description}
                 </p>
+                <ul className="mt-6 space-y-3 border-t border-border/80 pt-5">
+                  {content.includes.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm leading-5 text-foreground/78"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 size-1.5 shrink-0 rounded-full bg-accent"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className="mt-auto inline-flex w-fit items-center gap-2 pt-8 text-sm font-semibold text-primary underline-offset-4 hover:underline"
+                >
+                  {copy.requestService}
+                  <ArrowDownRight className="size-4" aria-hidden="true" />
+                </a>
               </article>
             );
           })}
