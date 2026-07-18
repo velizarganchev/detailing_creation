@@ -19,6 +19,14 @@ type FormStatus = {
 
 const fieldClassName =
   "min-h-12 w-full rounded-md border border-primary/15 bg-white px-4 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/70 focus:border-accent focus:ring-3 focus:ring-accent/15";
+const MAX_FILE_BYTES = 1_200_000;
+const MAX_TOTAL_FILE_BYTES = 3_200_000;
+const MAX_FILES = 3;
+const allowedFileTypes = new Set([
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+]);
 
 export function InquiryForm({ copy, locale }: InquiryFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
@@ -236,6 +244,27 @@ export function InquiryForm({ copy, locale }: InquiryFormProps) {
           multiple
           onChange={(event) => {
             const files = Array.from(event.currentTarget.files ?? []);
+
+            if (
+              files.length > MAX_FILES ||
+              files.some((file) => file.size > MAX_FILE_BYTES) ||
+              files.reduce((total, file) => total + file.size, 0) >
+                MAX_TOTAL_FILE_BYTES
+            ) {
+              event.currentTarget.value = "";
+              setSelectedFiles([]);
+              setStatus({ kind: "error", message: copy.filesTooLarge });
+              return;
+            }
+
+            if (files.some((file) => !allowedFileTypes.has(file.type))) {
+              event.currentTarget.value = "";
+              setSelectedFiles([]);
+              setStatus({ kind: "error", message: copy.invalidFiles });
+              return;
+            }
+
+            setStatus({ kind: "idle", message: "" });
             setSelectedFiles(files.map((file) => file.name));
           }}
         />
@@ -282,7 +311,9 @@ export function InquiryForm({ copy, locale }: InquiryFormProps) {
               ? "flex items-center gap-2 text-sm text-emerald-700"
               : "text-sm text-red-700"
           }
+          role={status.kind === "error" ? "alert" : "status"}
           aria-live="polite"
+          aria-atomic="true"
         >
           {status.kind === "success" ? (
             <CheckCircle2 className="size-4 shrink-0" aria-hidden="true" />
