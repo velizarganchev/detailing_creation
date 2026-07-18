@@ -210,6 +210,20 @@ const dictionaries = {
         "Der Start ist rund um 59597 mit einem vorläufigen Radius von etwa 100 Kilometern vorgesehen. Konkrete Flugplätze und Zugangsbedingungen werden noch bestätigt.",
       base: "Basis 59597",
       radius: "ca. 100 km geplant",
+      map: {
+        ariaLabel: "Interaktive Karte des geplanten Einsatzgebiets",
+        consentTitle: "Google Maps erst nach Ihrer Zustimmung",
+        consentDescription:
+          "Beim Aktivieren wird eine Verbindung zu Google hergestellt.",
+        privacyLink: "Mehr zum Datenschutz",
+        loadButton: "Karte laden",
+        loading: "Karte wird geladen …",
+        missingKey:
+          "Die Karte ist vorbereitet. Der Google-Maps-Schlüssel muss noch eingerichtet werden.",
+        error:
+          "Die Karte konnte nicht geladen werden. Bitte versuchen Sie es erneut.",
+        openExternal: "In Google Maps öffnen",
+      },
     },
     cta: {
       eyebrow: "Individuelle Anfrage",
@@ -519,6 +533,19 @@ const dictionaries = {
         "The initial service area is planned around 59597 with a preliminary radius of approximately 100 kilometres. Specific airfields and access requirements are still being confirmed.",
       base: "Base 59597",
       radius: "approx. 100 km planned",
+      map: {
+        ariaLabel: "Interactive map of the planned service area",
+        consentTitle: "Google Maps only with your consent",
+        consentDescription:
+          "Activating the map establishes a connection to Google.",
+        privacyLink: "Read the privacy details",
+        loadButton: "Load map",
+        loading: "Loading map …",
+        missingKey:
+          "The map is ready. The Google Maps key still needs to be configured.",
+        error: "The map could not be loaded. Please try again.",
+        openExternal: "Open in Google Maps",
+      },
     },
     cta: {
       eyebrow: "Individual request",

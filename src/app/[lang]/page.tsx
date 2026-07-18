@@ -31,7 +31,7 @@ export default async function Home({
         <Services copy={dictionary.services} />
         <Pricing copy={dictionary.pricing} />
         <Process copy={dictionary.process} />
-        <ServiceArea copy={dictionary.serviceArea} />
+        <ServiceArea copy={dictionary.serviceArea} locale={lang} />
         <FinalCta copy={dictionary.cta} locale={lang} />
       </main>
       <SiteFooter locale={lang} copy={dictionary.footer} />

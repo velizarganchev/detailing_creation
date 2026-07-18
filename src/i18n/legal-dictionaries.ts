@@ -110,7 +110,7 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
       updated: "18. Juli 2026",
       draftTitle: "Entwurf – technische und geschäftliche Angaben bestätigen",
       draftDescription:
-        "Der Text bildet den aktuellen Entwicklungsstand einschließlich Kontaktformular und Supabase-Speicherung ab. Verantwortliche Stelle, Hosting-Vertrag, Auftragsverarbeitungsverträge und Löschfrist müssen vor Veröffentlichung abschließend bestätigt werden.",
+        "Der Text bildet den aktuellen Entwicklungsstand einschließlich Kontaktformular, Supabase-Speicherung und zustimmungspflichtiger Google-Maps-Karte ab. Verantwortliche Stelle, Hosting-Vertrag, Auftragsverarbeitungsverträge und Löschfrist müssen vor Veröffentlichung abschließend bestätigt werden.",
       backHome: "Zurück zur Startseite",
       sections: [
         {
@@ -175,13 +175,33 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
           ],
         },
         {
-          title: "6. Optionale Fotos",
+          title: "6. Google Maps",
+          paragraphs: [
+            "Im Bereich „Einsatzgebiet“ kann eine interaktive Karte von Google Maps geladen werden. Die Karte bleibt zunächst deaktiviert. Erst wenn Sie die Schaltfläche „Karte laden“ betätigen, wird eine Verbindung zu Google hergestellt und die Karteninhalte werden für den aktuellen Seitenaufruf geladen.",
+            "Beim Laden können insbesondere Ihre IP-Adresse, Browser- und Geräteinformationen, Datum und Uhrzeit, die aufgerufene Seite, Referrer-Informationen sowie Ihre Interaktionen mit der Karte an Google übermittelt werden. Anbieter für Nutzer im Europäischen Wirtschaftsraum ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Eine Verarbeitung durch Google LLC in den USA oder weitere Empfänger außerhalb des Europäischen Wirtschaftsraums kann nicht ausgeschlossen werden.",
+            "Rechtsgrundlage für das Laden der Karte ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Ohne Ihre Aktivierung findet über diese Kartenfunktion keine Verbindung zu Google statt. Die Entscheidung wird nicht in einem Cookie oder im lokalen Speicher dauerhaft hinterlegt. Sie können eine erneute Verbindung verhindern, indem Sie die Seite neu laden und die Karte nicht erneut aktivieren. Die Rechtmäßigkeit einer bereits erfolgten Verarbeitung bleibt unberührt.",
+          ],
+          reviewNote:
+            "Die konkrete Google-Maps-Konfiguration, Vertrags- und Transfergrundlagen sowie die Formulierung zur Einwilligung vor dem Livegang rechtlich prüfen.",
+          links: [
+            {
+              label: "Datenschutzerklärung von Google",
+              href: "https://policies.google.com/privacy?hl=de",
+            },
+            {
+              label: "Nutzungsbedingungen für Google Maps",
+              href: "https://www.google.com/intl/de/help/terms_maps/",
+            },
+          ],
+        },
+        {
+          title: "7. Optionale Fotos",
           paragraphs: [
             "Das Hochladen von Fotos ist freiwillig und dient ausschließlich der ersten fachlichen Einschätzung. Bitte laden Sie möglichst keine Personen, Kennzeichen, Ausweisdokumente, Zugangsdaten oder sonstige nicht erforderliche personenbezogene beziehungsweise vertrauliche Informationen hoch.",
           ],
         },
         {
-          title: "7. Speicherdauer",
+          title: "8. Speicherdauer",
           paragraphs: [
             "Wir speichern Anfragen und zugehörige Fotos nur so lange, wie dies für Bearbeitung, Angebotserstellung, Nachfragen und gegebenenfalls die Durchführung des Vertrags erforderlich ist. Danach werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten oder Ansprüche eine längere Speicherung erfordern.",
           ],
@@ -189,32 +209,32 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
             "Vor Veröffentlichung eine feste Löschroutine technisch und organisatorisch einführen. Als Arbeitswert sind sechs Monate nach Abschluss einer nicht beauftragten Anfrage vorgesehen; dieser Zeitraum muss noch bestätigt werden.",
         },
         {
-          title: "8. Empfänger und Auftragsverarbeiter",
+          title: "9. Empfänger und Auftragsverarbeiter",
           paragraphs: [
             "Zugriff erhalten nur die für die Bearbeitung zuständigen Personen sowie erforderliche technische Dienstleister. Eine Weitergabe an andere Empfänger erfolgt nur, wenn sie für die Anfrage oder Vertragserfüllung erforderlich ist, eine gesetzliche Pflicht besteht oder eine andere zulässige Rechtsgrundlage vorliegt.",
           ],
         },
         {
-          title: "9. Cookies, Analyse und Marketing",
+          title: "10. Cookies, Analyse und Marketing",
           paragraphs: [
-            "In der aktuellen Website-Version setzen wir keine Analyse-, Marketing- oder Profiling-Dienste und keine dafür bestimmten Cookies ein. Sollte sich dies ändern, wird diese Datenschutzerklärung vor dem Einsatz angepasst und – soweit erforderlich – eine Einwilligung eingeholt.",
+            "In der aktuellen Website-Version setzen wir keine Analyse-, Marketing- oder Profiling-Dienste und keine dafür bestimmten Cookies ein. Google Maps wird ausschließlich nach der oben beschriebenen Aktivierung geladen; die Entscheidung wird von dieser Website nicht dauerhaft gespeichert. Sollte sich der Einsatz externer Dienste ändern, wird diese Datenschutzerklärung vorab angepasst und – soweit erforderlich – eine Einwilligung eingeholt.",
           ],
         },
         {
-          title: "10. Pflichtangaben und automatisierte Entscheidungen",
+          title: "11. Pflichtangaben und automatisierte Entscheidungen",
           paragraphs: [
             "Die als Pflichtfeld gekennzeichneten Angaben werden benötigt, um Ihre Anfrage sinnvoll zu bearbeiten. Ohne diese Angaben kann das Formular nicht übermittelt werden. Optionale Angaben und Fotos sind freiwillig. Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.",
           ],
         },
         {
-          title: "11. Ihre Rechte",
+          title: "12. Ihre Rechte",
           paragraphs: [
             "Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Sie können einer Verarbeitung auf Grundlage berechtigter Interessen widersprechen. Besteht die Verarbeitung ausnahmsweise auf einer Einwilligung, kann diese mit Wirkung für die Zukunft widerrufen werden.",
             "Zur Ausübung Ihrer Rechte genügt eine Nachricht an die oben genannte Datenschutz-Kontaktadresse.",
           ],
         },
         {
-          title: "12. Beschwerderecht",
+          title: "13. Beschwerderecht",
           paragraphs: [
             "Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Für den Sitz in Nordrhein-Westfalen ist insbesondere die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen erreichbar:",
           ],
@@ -231,7 +251,7 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
           ],
         },
         {
-          title: "13. Sicherheit und Aktualisierung",
+          title: "14. Sicherheit und Aktualisierung",
           paragraphs: [
             "Die veröffentlichte Website soll verschlüsselt über HTTPS übertragen werden. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten zu schützen.",
             "Wir passen diese Datenschutzerklärung an, wenn sich Rechtslage, eingesetzte Dienste oder Verarbeitungsvorgänge ändern. Maßgeblich ist die jeweils auf dieser Seite veröffentlichte Fassung.",
@@ -317,7 +337,7 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
       updated: "18 July 2026",
       draftTitle: "Draft – confirm technical and business details",
       draftDescription:
-        "This text reflects the current development state, including the enquiry form and Supabase storage. The controller, hosting contract, data processing agreements and deletion period must be confirmed before publication.",
+        "This text reflects the current development state, including the enquiry form, Supabase storage and consent-gated Google Maps integration. The controller, hosting contract, data processing agreements and deletion period must be confirmed before publication.",
       backHome: "Back to the home page",
       sections: [
         {
@@ -382,13 +402,33 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
           ],
         },
         {
-          title: "6. Optional photographs",
+          title: "6. Google Maps",
+          paragraphs: [
+            "An interactive Google Maps map can be loaded in the “Service area” section. The map is initially disabled. A connection to Google is established and the map content is loaded for the current page view only after you select “Load map”.",
+            "When the map is loaded, data including your IP address, browser and device information, date and time, the requested page, referrer information and your interactions with the map may be sent to Google. The provider for users in the European Economic Area is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Processing by Google LLC in the United States or other recipients outside the European Economic Area cannot be ruled out.",
+            "The legal basis for loading the map is your consent under Article 6(1)(a) GDPR. This map feature does not connect to Google unless you activate it. Your decision is not stored permanently in a cookie or local storage. You can prevent a new connection by reloading the page and not activating the map again. This does not affect the lawfulness of processing that has already taken place.",
+          ],
+          reviewNote:
+            "Before launch, obtain legal review of the specific Google Maps configuration, contractual and transfer safeguards, and the consent wording.",
+          links: [
+            {
+              label: "Google Privacy Policy",
+              href: "https://policies.google.com/privacy?hl=en",
+            },
+            {
+              label: "Google Maps terms of service",
+              href: "https://www.google.com/help/terms_maps/",
+            },
+          ],
+        },
+        {
+          title: "7. Optional photographs",
           paragraphs: [
             "Uploading photographs is voluntary and serves only to support an initial professional assessment. Wherever possible, do not upload people, registration plates, identity documents, access credentials or other unnecessary personal or confidential information.",
           ],
         },
         {
-          title: "7. Retention period",
+          title: "8. Retention period",
           paragraphs: [
             "We retain enquiries and related photographs only for as long as necessary to handle the enquiry, prepare a quotation, answer follow-up questions and, where applicable, perform the contract. The data is then deleted unless statutory retention duties or legal claims require longer storage.",
           ],
@@ -396,32 +436,32 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
             "Before publication, implement a fixed technical and organisational deletion routine. Six months after closing an enquiry that does not result in an order is the current working value and still needs to be confirmed.",
         },
         {
-          title: "8. Recipients and processors",
+          title: "9. Recipients and processors",
           paragraphs: [
             "Access is limited to the people responsible for handling the enquiry and the technical service providers that are required for operation. Data is disclosed to other recipients only where necessary for the enquiry or performance of a contract, required by law or permitted by another legal basis.",
           ],
         },
         {
-          title: "9. Cookies, analytics and marketing",
+          title: "10. Cookies, analytics and marketing",
           paragraphs: [
-            "The current version of the website does not use analytics, marketing or profiling services, nor cookies intended for those purposes. If this changes, this policy will be updated before use and consent will be obtained where required.",
+            "The current version of the website does not use analytics, marketing or profiling services, nor cookies intended for those purposes. Google Maps is loaded only after the activation described above, and this website does not store that decision permanently. If the use of external services changes, this policy will be updated in advance and consent will be obtained where required.",
           ],
         },
         {
-          title: "10. Required information and automated decisions",
+          title: "11. Required information and automated decisions",
           paragraphs: [
             "Fields marked as required are needed to handle your enquiry meaningfully. The form cannot be submitted without them. Optional information and photographs are voluntary. We do not use automated decision-making, including profiling.",
           ],
         },
         {
-          title: "11. Your rights",
+          title: "12. Your rights",
           paragraphs: [
             "Subject to the statutory conditions, you have rights of access, rectification, erasure, restriction of processing and data portability. You may object to processing based on legitimate interests. Where processing is exceptionally based on consent, you may withdraw it at any time with effect for the future.",
             "To exercise your rights, contact the privacy contact address stated above.",
           ],
         },
         {
-          title: "12. Right to lodge a complaint",
+          title: "13. Right to lodge a complaint",
           paragraphs: [
             "You may lodge a complaint with a data protection supervisory authority. For a controller established in North Rhine-Westphalia, the State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia can be contacted at:",
           ],
@@ -438,7 +478,7 @@ const legalDictionaries: Record<Locale, LegalDictionary> = {
           ],
         },
         {
-          title: "13. Security and updates",
+          title: "14. Security and updates",
           paragraphs: [
             "The published website is intended to be transmitted over encrypted HTTPS connections. We take appropriate technical and organisational measures to protect personal data.",
             "We update this privacy policy when the law, the services we use or our processing activities change. The version published on this page is the applicable version.",
