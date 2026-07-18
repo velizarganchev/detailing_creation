@@ -70,7 +70,7 @@ export function Services({ copy }: { copy: Dictionary["services"] }) {
             return (
               <article
                 key={content.title}
-                className="group flex min-h-[27rem] flex-col border-b border-r bg-card p-7 transition-colors hover:bg-white sm:p-8 lg:p-10"
+                className="group flex min-h-108 flex-col border-b border-r bg-card p-7 transition-colors hover:bg-white sm:p-8 lg:p-10"
               >
                 <div className="flex items-start justify-between">
                   <span className="font-mono text-xs text-muted-foreground">

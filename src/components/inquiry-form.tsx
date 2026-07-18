@@ -73,7 +73,7 @@ export function InquiryForm({ copy, locale }: InquiryFormProps) {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
       <input type="hidden" name="locale" value={locale} />
-      <div className="absolute -left-[9999px]" aria-hidden="true">
+      <div className="absolute left-[-9999px]" aria-hidden="true">
         <label htmlFor="website">{copy.website}</label>
         <input
           id="website"
